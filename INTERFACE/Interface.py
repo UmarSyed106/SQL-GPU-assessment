@@ -1,7 +1,7 @@
 # Import the libraries to connect to the database and present the information in tables
 import sqlite3
 from tabulate import tabulate
-
+from time import sleep
 # This is the filename of the database to be used
 DB_NAME = 'Gpu database.db'
 
@@ -25,7 +25,8 @@ def print_query(view_name:str):
 
 menu_choice = ''
 while menu_choice != 'Z':
-    menu_choice = input('This is a database for GPUS, and we have some premade view for you!\n\n'
+    menu_choice = input('\n'
+                        'This is a database for GPUS, and we have some premade view for you!\n\n'
                         'Type the letter for the information you desire:\n'
                         'A: Model, Clock speed, VRAM, and price of all $900 or cheaper GPUS\n'
                         'B: Make, model, VRAM, Wattage, Clock Speed and Release date of all Non-Intel 1500 MHz GPUS\n'
@@ -41,7 +42,7 @@ while menu_choice != 'Z':
     elif menu_choice == 'B':
         print_query('High end non-intel')
     elif menu_choice == 'C':
-        print_query('Intel/RTX 30 40')
+        print_query('Intel/RTX 30 40 ')
     elif menu_choice == 'D':
         print_query('AMD and 2000')    
     elif menu_choice == 'E':
@@ -50,5 +51,18 @@ while menu_choice != 'Z':
         print_query('16GB vRAM')
     elif menu_choice == 'G':
         print_query('1800 MHz')
-    elif menu_choice == 'z':
-        print("Initiating detonation seqeunce")
+    elif menu_choice == 'Z':
+        print("Initiating detonation seqeunce in:")
+        print('5')
+        sleep(1)        
+        print('4')
+        sleep(1)
+        print('3')
+        sleep(1)        
+        print('2')
+        sleep(1)
+        print('1')
+        sleep(1)
+        print('0')
+        sleep(1)
+        print("Gottem")
